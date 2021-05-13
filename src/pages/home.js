@@ -1,5 +1,6 @@
 import React from 'react'
-import {}
+import {Ellipse} from '../components'
+
 export default function Home() {
   return (
     <div className="home">
