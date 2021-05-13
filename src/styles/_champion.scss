@@ -1,0 +1,58 @@
+.champion {
+  position: relative;
+  background-color: $darkGrey;
+  width: 250px;
+  height: fit-content;
+  margin: 0 3em;
+  height: 560px;
+
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em 0;
+  }
+  
+  &__country,
+  &__name {
+    position: absolute;
+    transform-origin: left;
+  }
+
+  &__country {
+    transform: translateX(2em) rotate(90deg);
+    text-transform: capitalize;
+    color: $primary;
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+
+  &__name {
+    @include stroke-text;
+    font-size: 3.65rem;
+    transform: rotate(90deg) translate(-.35em, .1em);
+    top: 0;
+  }
+
+  &__abilities {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: $darkGrey ;
+    border: 1px solid $white;
+    padding: 2em 1em;
+    justify-content: space-between;
+    
+    bottom: 0;
+    transform: translate(1.5em, 1.5em);
+    height: 55px;
+
+    & img {
+      object-fit: contain;
+      display: block;
+      padding: 0 .7em;
+    }
+  }
+
+}

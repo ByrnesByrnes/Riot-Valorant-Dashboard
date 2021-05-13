@@ -3,3 +3,7 @@ $white: #fff;
 $lightGrey: #EFEFEF;
 $mediumGrey: #505155;
 $darkGrey: #1F2326;
+$stroke: -1px -1px 0 $white,
+          1px -1px 0 $white,
+          -1px  1px 0 $white,
+          1px  1px 0 $white;

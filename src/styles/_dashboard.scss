@@ -1,8 +1,66 @@
 .dashboard {
   position: relative;
   height: 900px;
-  width: 1700px;
-  background: #fff;
+  width: 100vw;
+  max-width: 1600px;
+  background: $primary;
   border-radius: 32px;
   filter: drop-shadow(0 0 15px rgba(0,0,0, .75));
+  background-image: url('../assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../assets/elements.png');
+    background-position: center;
+    background-size: contain;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    top: 5%;
+    width: 90%;
+    height: 85%;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__left {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    
+  }
+
+  &__right {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    right: -5em;
+  }
+
+  &__category {
+    @include stroke-text;
+    font-size: 8rem;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: .7;
+  }
 }

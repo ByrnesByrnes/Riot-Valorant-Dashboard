@@ -1,0 +1,10 @@
+@mixin stroke-text {
+  color: black;
+  text-shadow: $stroke;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  mix-blend-mode: screen;
+  height:fit-content;
+  width: fit-content;
+}
