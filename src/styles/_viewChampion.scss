@@ -1,0 +1,154 @@
+.view-champion {
+  margin-left: 10em;
+  display: flex;
+  align-items: center;
+  transform: translateY(-3em);
+
+  &__left {
+    background: $offWhite;
+    width: 55%;
+   
+  }
+
+  &__title {
+
+  }
+
+  &__story {
+    padding: 2em;
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    font-family: 'Monserrat', sans-serif;
+    font-size: .75rem;
+    color: $darkGrey;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 1em 0;
+  }
+
+  &__content {
+    padding-left: 2em;
+    width: 100%;
+
+    &>div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__stats { 
+    margin: auto 0;
+    &>p {
+      font-family: 'Poppins', sans-serif;
+      text-transform: capitalize;
+      color: #C4C4C4;
+      font-size: .75rem;
+      margin: 1em 0;
+
+      &>span {
+        color: $darkGrey;
+      }
+    }
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    transform: translateX(-3em);
+  }
+
+  &__stream {
+    min-width: 300px;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+
+    &>img {
+      object-fit: cover;
+
+    }
+  }
+
+  &__selector {
+
+    &>div:first-child {
+      background-color: $primary;
+      border-color: $primary;
+    }
+
+    &>div {
+
+      height: 20px;
+      width: 5px;
+      border: 1px solid $darkGrey;
+      margin: .5em 0;
+    }
+
+  }
+  
+  &__abilities {
+    background-color: $darkGrey;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    color: $white;
+    padding: 1em;
+  }
+
+  &__ability-img {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+  }
+
+  &__ability {
+    text-align: center;
+    width: 100%;
+    border-right: 1px solid $primary;
+    padding: 0.5em;
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+  
+  &__ability-title {
+    margin: .5em 0;
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+
+  &__ability-description {
+    font-size: .5rem;
+  }
+
+  &__right {
+    position: absolute;
+    width: 50%;
+    top: -15%;
+    right: 5%;
+  }
+  
+  &__main-img {
+    position: relative;
+    z-index: 4;
+   
+  }
+
+  &__name {
+    @include stroke-text;
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translateY(-50%) rotate(90deg);
+  
+    font-size: 12em; 
+  }
+}

@@ -8,3 +8,25 @@
   height:fit-content;
   width: fit-content;
 }
+
+@mixin flat-corner {
+  position: relative;
+  background: $offWhite;
+  background: linear-gradient(-45deg, $offWhite 98.5%, transparent 98.5%);
+  height: 124px;
+  padding: 1em 2em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; 
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(-45deg, #000 98.5%, transparent 98.5%);
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    top:-2px;
+    left:-2px;
+    z-index: -1;
+  }
+}

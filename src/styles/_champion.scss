@@ -1,10 +1,65 @@
 .champion {
   position: relative;
-  background-color: $darkGrey;
+  background: $darkGrey;
+  background: linear-gradient(-45deg, $white 98.5%, transparent 98.5%);
+  stroke: black;
+  stroke-width: 2px;
   width: 250px;
   height: fit-content;
   margin: 0 3em;
-  height: 560px;
+  height: 550px;
+  transition: 2s ease-in-out;
+  cursor: pointer;
+  
+  &.selected,
+  &:hover{
+    &:after {
+      opacity: 0;
+    }
+
+    .champion__name {
+      color: white;
+      text-shadow: -2px -2px 0px $darkGrey,
+                    2px -2px 0px $darkGrey,
+                    -2px  2px 0px $darkGrey,
+                    2px  2px 0px $darkGrey;
+      mix-blend-mode: multiply;
+      opacity: 1;
+    }
+
+    .champion__abilities {
+      background-color: $white ;
+      border: 1px solid $darkGrey;
+
+      & img {
+        filter: invert(.89);
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(-45deg, $darkGrey 98.5%, transparent 98.5%);
+    height:100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: black;
+    z-index: -1;
+    background: linear-gradient(-45deg, black 98.5%, transparent 98.5%);
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    top: -2px;
+    left: -2px;
+  }
 
   &__info {
     position: absolute;
@@ -13,11 +68,17 @@
     width: 100%;
     padding: 1em 0;
   }
-  
+
+  &__img {
+    position: relative;
+    z-index: 4;
+  }
+
   &__country,
   &__name {
     position: absolute;
     transform-origin: left;
+    z-index: 5;
   }
 
   &__country {
@@ -43,11 +104,12 @@
     border: 1px solid $white;
     padding: 2em 1em;
     justify-content: space-between;
-    
+    z-index: 5;
     bottom: 0;
     transform: translate(1.5em, 1.5em);
     height: 55px;
-
+    transition: .2s ease-in-out;
+    
     & img {
       object-fit: contain;
       display: block;

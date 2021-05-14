@@ -1,6 +1,7 @@
 import './styles/style.scss';
 import { Ellipse,Dashboard } from './components';
 
+
 export function App() {
   return (
     <>
