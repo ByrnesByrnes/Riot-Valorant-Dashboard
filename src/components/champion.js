@@ -14,8 +14,8 @@ export default function Champion({ id, name, country, img, abilities, champion,s
       <img className="champion__img" src={img} alt={`Champion${name}`} />
       <div className="champion__abilities">
         {abilities.map((ability, i) => (
-          <div key={i}>    
-            <img src={ability.img} alt="character ability" />  
+          <div key={i} className="champion__ability">    
+            {ability.img}
           </div>
         ))}
       </div>    

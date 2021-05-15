@@ -30,9 +30,10 @@
     .champion__abilities {
       background-color: $white ;
       border: 1px solid $darkGrey;
-
-      & img {
-        filter: invert(.89);
+    }
+    .champion__ability{
+      & > svg {
+        fill: $darkGrey;
       }
     }
   }
@@ -102,18 +103,21 @@
     align-items: center;
     background-color: $darkGrey ;
     border: 1px solid $white;
-    padding: 2em 1em;
+    padding: 2em 0;
     justify-content: space-between;
     z-index: 5;
     bottom: 0;
     transform: translate(1.5em, 1.5em);
     height: 55px;
     transition: .2s ease-in-out;
-    
-    & img {
-      object-fit: contain;
-      display: block;
-      padding: 0 .7em;
+    width: 250px;
+  
+  }
+
+  &__ability {
+    & > svg {
+      stroke: none;
+      transform: scale(.5);
     }
   }
 

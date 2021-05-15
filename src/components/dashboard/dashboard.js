@@ -9,7 +9,7 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard">
-      <Header />
+      <Header/>
       <div className="dashboard__content">
           <ChampionsDisplay
             champions={champions} 

@@ -46,6 +46,14 @@ p {
   margin: 0;
 }
 
+svg {
+  transition: .2s ease-in-out;
+}
+
+.ability {
+  fill: red;
+}
+
 .ellipse {
   position: fixed;
   border-radius: 50%;

@@ -1,13 +1,14 @@
 .view-champion {
   margin-left: 10em;
   display: flex;
-  align-items: center;
-  transform: translateY(-3em);
+  align-items: flex-start;
+  height: 100%;
+  
 
   &__left {
     background: $offWhite;
     width: 55%;
-   
+    margin: 1em 0;
   }
 
   &__title {
@@ -61,35 +62,38 @@
     justify-content: space-between;
     align-items: stretch;
     transform: translateX(-3em);
+    position: relative;
+    z-index: 10;
   }
 
   &__stream {
+    display: none;
+    height: 100%;
     min-width: 300px;
     width: 100%;
-    max-width: 400px;
-    height: 100%;
+    max-width: 450px;
+    object-fit: cover;
 
-    &>img {
-      object-fit: cover;
-
+    &.selected {
+      display: block;
     }
   }
 
   &__selector {
-
-    &>div:first-child {
-      background-color: $primary;
-      border-color: $primary;
-    }
-
     &>div {
-
       height: 20px;
       width: 5px;
       border: 1px solid $darkGrey;
-      margin: .5em 0;
+      margin: .75em 0;
+      cursor: pointer;
+      transition: .2s ease-in-out;
+      
+      &:hover,
+      &.selected {
+        background-color: $primary;
+        border-color: $primary;
+      }
     }
-
   }
   
   &__abilities {
@@ -100,12 +104,21 @@
     align-items: center;
     color: $white;
     padding: 1em;
+    position: relative;
+    z-index: 6;
   }
 
   &__ability-img {
+    position: relative;
     display: block;
     margin: 0 auto;
     width: 50px;
+    transition: .2s ease-in-out;
+
+    &:hover svg,
+    &.selected svg {
+      fill: $primary;
+    }
   }
 
   &__ability {
@@ -113,6 +126,26 @@
     width: 100%;
     border-right: 1px solid $primary;
     padding: 0.5em;
+    cursor: pointer;
+    position: relative;
+    // Add Hover image color
+
+    &:hover:before {
+      svg {
+        color:$primary;
+      }
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      background: transparent;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 4;
+    }
 
     &:last-of-type {
       border-right: none;
@@ -129,26 +162,25 @@
     font-size: .5rem;
   }
 
-  &__right {
+  &__image {
     position: absolute;
     width: 50%;
     top: -15%;
     right: 5%;
+    z-index: 5;
   }
   
   &__main-img {
+    min-width: 500px;
     position: relative;
-    z-index: 4;
-   
   }
 
   &__name {
     @include stroke-text;
     position: absolute;
-    top: 50%;
-    right: -5%;
+    top: 40%;
+    right: -2%;
     transform: translateY(-50%) rotate(90deg);
-  
     font-size: 12em; 
   }
 }

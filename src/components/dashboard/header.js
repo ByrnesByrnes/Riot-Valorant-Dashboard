@@ -1,7 +1,7 @@
 import React from 'react'
 import {MdArrowDropDown} from 'react-icons/md'
 
-export function Header() {
+export function Header({setSelectedChampion}) {
   return (
     <div className="header">
     <div className="header__left">

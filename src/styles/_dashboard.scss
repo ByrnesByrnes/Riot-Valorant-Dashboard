@@ -1,7 +1,7 @@
 .dashboard {
   position: relative;
-  height: 900px;
   width: 100vw;
+  height: 900px;
   max-width: 1600px;
   background: $primary;
   border-radius: 32px;
@@ -46,29 +46,30 @@
   &__right {
     position: absolute;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
     height: 100%;
     width: 100%;
     right: -5em;
-    top: -5%;
+    top: 5%;
   }
 
   &__category {
     @include stroke-text;
     font-size: 8rem;
-    top: 45%;
+    top: 38%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%) rotate(90deg);
     opacity: .7;
     z-index: 4;
   }
+  
   // ==== Lower Section of Dashboard ====
   &__info{
     position: absolute;
-    bottom: 3em;
-    z-index: 5;
+    bottom: 14%;
+    z-index: 6;
     left: -2em;
     width: 100%;
     display: flex;

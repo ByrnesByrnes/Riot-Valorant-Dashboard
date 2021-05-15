@@ -5,12 +5,19 @@ import { Detail } from './dashboard/detail'
 
 
 export default function CharacterDisplay({ champions, selectedChampion, setSelectedChampion }) {
-  const [viewChampion, setViewChampion] = useState(false)
+  const [viewChampion, setViewChampion] = useState(champions[1])
+  const [currentAbility, setCurrentAbility] = useState(0)
 
   // Removes one of 4 abilities 
   let currentAbilities = selectedChampion.abilities.filter((_, i) => i !== 1)
 
   console.log(viewChampion, 'selected')
+
+  const handleSkillSelect = e => {
+    e.preventDefault()
+    console.log(e.target)
+    setCurrentAbility(Number(e.target.id))
+  }
 
   useEffect(() => {
 
@@ -20,7 +27,7 @@ export default function CharacterDisplay({ champions, selectedChampion, setSelec
   return (
     <>
       {
-        !viewChampion ?
+        viewChampion ?
           <>
             <div
               className="dashboard__left"
@@ -69,7 +76,20 @@ export default function CharacterDisplay({ champions, selectedChampion, setSelec
                 </div>
                 <div className="view-champion__details">
                   <div>
-                    <img className="view-champion__stream" src="./images/champions/stream.png" alt="stream" />
+                   { viewChampion.abilities.map(ability => (
+                      <video 
+                        className={`view-champion__stream ${ability.id === currentAbility ? 'selected' : ''}`}  
+                        preload="true" 
+                        loop 
+                        playsInline 
+                        poster
+                        autoplay
+                        muted
+                        controls
+                        type="video/mp4" 
+                        src={ability.vid}
+                      ></video>
+                    ))}
                   </div>
 
                   <div className="view-champion__content">
@@ -80,38 +100,47 @@ export default function CharacterDisplay({ champions, selectedChampion, setSelec
                       <div className="view-champion__stats">
                         <p>Name: <span>{viewChampion.name}</span></p>
                         <p>Counrty: <span>{viewChampion.country}</span></p>
-                        <p>signature ability: <span>Tailwind</span></p>
-                        <p>Abilities: <span>cloudburst, updraft</span></p>
-                        <p>ultimete: <span>blade storm</span></p>
+                        <p>signature ability: <span>{viewChampion.abilities[2].name}</span></p>
+                        <p>Abilities: <span>{viewChampion.abilities[0].name}, {viewChampion.abilities[1].name}</span></p>
+                        <p>ultimate: <span>{viewChampion.abilities[3].name}</span></p>
                       </div>
 
                       <div className="view-champion__selector">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                      {
+                        viewChampion.abilities.map(ability => (
+                          <div 
+                            key={ability.id} 
+                            onClick={handleSkillSelect}
+                            id={ability.id}
+                            className={`${ability.id === currentAbility ? 'selected' : ''}`}
+                          ></div>
+                        ))
+                      }
                       </div>
                     </div>
                   </div>
-
                 </div>
                 <div className="view-champion__abilities">
-                {viewChampion.abilities.map((ability, i) => (
-
-                  <div key={i} className="view-champion__ability">
-                    <div className="view-champion__ability-img">
-                      <img src={ability.img} alt="" />
+                {viewChampion.abilities.map(ability => (
+                  <div 
+                    key={ability.id}
+                    onClick={handleSkillSelect}
+                    id={ability.id}
+                    className="view-champion__ability"
+                  >
+                    <div 
+                      className={`view-champion__ability-img ${ability.id === currentAbility ? 'selected' : ''}`}
+                    >
+                      {ability.img}
                     </div>
                     <h3 className="view-champion__ability-title">{ability.name}:</h3>
                     <p className="view-champion__ability-description">{ability.description}</p>
                   </div>
                 ))}
                 </div>
-              </div>
-              <div className="view-champion__right">
-
-
+              <div className="view-champion__image">
                 <img className="view-champion__main-img" src="./images/champions/jett/jett-body.png" alt="" />
+              </div>
               </div>
                 <h1 className="view-champion__name">jett</h1>
             </div>
