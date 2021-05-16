@@ -29,8 +29,10 @@
     }
   }
   &__back {
+    position: relative;
     cursor: pointer;
     transition: .2s ease-in-out;
+    z-index: 10;
   }
 
   &__back:hover {

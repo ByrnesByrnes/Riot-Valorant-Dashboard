@@ -12,11 +12,8 @@ export default function CharacterDisplay({ champions, selectedChampion, setSelec
   // Removes one of 4 abilities 
   let currentAbilities = selectedChampion.abilities.filter((_, i) => i !== 1)
 
-  console.log(viewChampion, 'selected')
-
   const handleSkillSelect = e => {
     e.preventDefault()
-    console.log(e.target)
     setCurrentAbility(Number(e.target.id))
   }
 
@@ -30,7 +27,7 @@ export default function CharacterDisplay({ champions, selectedChampion, setSelec
     transform: 'translateX(0)',
     delay: 1000
   })
-  
+
   // animation for abilities into display
   const leftTrail = useTrail(currentAbilities.length, {
     from: {
@@ -74,8 +71,8 @@ export default function CharacterDisplay({ champions, selectedChampion, setSelec
             <div className="dashboard__info">
               {
                 leftTrail.map((styles, i) => (
-                  <animated.div style={styles}>
-                    <Detail key={i} ability={currentAbilities[i]} />
+                  <animated.div key={i} style={styles}>
+                    <Detail ability={currentAbilities[i]} />
                   </animated.div>
                 ))
               }
@@ -107,14 +104,13 @@ export default function CharacterDisplay({ champions, selectedChampion, setSelec
                   <div>
                     {viewChampion.abilities.map(ability => (
                       <video
+                        key={ability.id}
                         className={`view-champion__stream ${ability.id === currentAbility ? 'selected' : ''}`}
                         preload="true"
                         loop
                         playsInline
-                        poster
-                        autoplay
+                        autoPlay
                         muted
-                        controls
                         type="video/mp4"
                         src={ability.vid}
                       ></video>

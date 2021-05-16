@@ -40,7 +40,7 @@ export const champions = [
         name: 'hot hands',
         type: '',
         img: <Vector2/>,
-        description: 'Throw a fireball that explodes after a set amount of time or upon hitting the ground, creating a lingering fire zone that damages enemies.',
+        description: 'Throw a fireball that explodes after a set amount of time or upon hitting the ground.',
         vid: 'https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt318f7ee7d6435fac/5ecad82cf5bd13348a6cac7d/Phoenix_E_v001_web.mp4'
       },
       {
@@ -48,7 +48,7 @@ export const champions = [
         name: 'blaze',
         type: 'signature',
         img: <Vector3/>,
-        description: 'create a line of flame that moves forward, creating a wall of fire that blocks vision and damages players passing through it.',
+        description: 'create a line of flame that moves forward, creating a wall of fire that blocks vision.',
         vid: 'https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf0ee7c9d84985ecf/5ecad82d957e405e09905751/Phoenix_C_v001_web.mp4'
       },
       {
@@ -56,7 +56,7 @@ export const champions = [
         name: 'run it back',
         type: 'ultimate',
         img: <Vector4/>,
-        description: 'While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.',
+        description: 'dying or allowing the timer to expire will end this ability.',
         vid: 'https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt50beaed6524c3219/5ecad82bc846021917ecbb89/Phoenix_X_v001_web.mp4'
       },
     ]
@@ -164,7 +164,7 @@ export const champions = [
         type: '',
         img: <Vector14/>,
         description: 'Equip a set of highly accurate knives that recharge on killing an opponent. FIRE to throw a single knife at your target.',
-        vid: 'A barrier orb'
+        vid: 'https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt5a0edb670c30fbdc/5ecad8732f5c725928765507/Sage_C_v001_web.mp4'
       },
       {
         id: 2,
