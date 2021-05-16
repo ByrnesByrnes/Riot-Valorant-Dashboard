@@ -21,6 +21,21 @@
     & > :last-child {
       margin-bottom: 0;
     }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__back {
+    cursor: pointer;
+    transition: .2s ease-in-out;
+  }
+
+  &__back:hover {
+    transform: scale(1.1);
+    color: $primary;
   }
 
   &__text {
@@ -164,23 +179,27 @@
 
   &__image {
     position: absolute;
-    width: 50%;
-    top: -15%;
-    right: 5%;
-    z-index: 5;
+    top:0;
+    right: 0;
+    transform: translateY(-5%);
+    display: grid;
+    place-content: center;
   }
   
   &__main-img {
-    min-width: 500px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+
+    & > img {
+      width: 500px;
+    }
   }
 
   &__name {
     @include stroke-text;
-    position: absolute;
-    top: 40%;
-    right: -2%;
-    transform: translateY(-50%) rotate(90deg);
-    font-size: 12em; 
+    font-size: 8em;
+    transform: rotate(90deg);
+    margin-left: -2.5em;
   }
 }

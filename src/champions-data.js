@@ -25,6 +25,7 @@ export const champions = [
     name: 'phoenix',
     country: 'united kingdom',
     img: './images/champions/phoenix/art.png',
+    largeImg: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf0200e1821b5b39f/5eb7cdc144bf8261a04d87f9/V_AGENTS_587x900_Phx.png',
     abilities: [
       {
         id: 0,
@@ -55,7 +56,7 @@ export const champions = [
         name: 'run it back',
         type: 'ultimate',
         img: <Vector4/>,
-        description: 'place a marker at Phoenix’s location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.',
+        description: 'While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.',
         vid: 'https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt50beaed6524c3219/5ecad82bc846021917ecbb89/Phoenix_X_v001_web.mp4'
       },
     ]
@@ -65,6 +66,7 @@ export const champions = [
     name: 'jett',
     country: 'south korea',
     img: './images/champions/jett/art.png',
+    largeImg: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltceaa6cf20d328bd5/5eb7cdc1b1f2e27c950d2aaa/V_AGENTS_587x900_Jett.png',
     abilities: [
       {
         id: 0,
@@ -95,7 +97,7 @@ export const champions = [
         name: 'blade storm',
         type: 'ultimate',
         img: <Vector8/>,
-        description: 'Equip a set of highly accurate knives that recharge on killing an opponent. FIRE to throw a single knife at your target.',
+        description: 'a set of highly accurate knives that recharge on killing an opponent. FIRE to throw a single knife at your target.',
         vid: 'https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blta43d8d506e2f5e00/5ecad7f6957e405e0990574d/Jett_X_v001_web.mp4'
       },
     ]
@@ -105,6 +107,7 @@ export const champions = [
     name: 'sova',
     country: 'russia',
     img: './images/champions/sova/sova.png',
+    largeImg: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf11234f4775729b7/5ebf2c275e73766852c8d5d4/V_AGENTS_587x900_ALL_Sova_2.png',
     abilities: [
       {
         id: 0,
@@ -145,6 +148,7 @@ export const champions = [
     name: 'sage',
     country: 'china',
     img: './images/champions/sage/sage.png',
+    largeImg: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8a627ec10b57f4f2/5eb7cdc16509f3370a5a93b7/V_AGENTS_587x900_sage.png',
     abilities: [
       {
         id: 0,

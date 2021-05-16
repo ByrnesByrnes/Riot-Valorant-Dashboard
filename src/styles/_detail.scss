@@ -8,7 +8,7 @@
   &__description {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 50%;
     height: 100%;
     animation: fadeIn 2s ease-in-out;
@@ -23,7 +23,7 @@
     }
 
     & h3 {
-
+      margin-bottom: .5em;
       text-transform: capitalize;
       letter-spacing: -1px;
     }
@@ -31,16 +31,23 @@
     & p {
       color: $darkGrey;
       font-size: .5rem;
+      text-transform: capitalize;
     }
   }
+
   &__img {
     position: relative;
     width: 30%;
     height: 100%;
-    & > img {
-      height: 100%;
-      
-      filter: invert(.9);
+    display: grid;
+    place-content: center;
+
+    &>svg {
+      position: relative;
+      z-index: 3;
+      fill: $darkGrey;
+      margin: 0 auto;
+      transform: scale(1.5);
     }
     
     &::before {
@@ -50,7 +57,7 @@
       width: 90px;
       background-color: $primary;
       bottom: -1em;
-      left: -35%;
+      left: -25%;
     }
   }
   
