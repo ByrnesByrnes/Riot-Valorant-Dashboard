@@ -1,11 +1,10 @@
 @mixin stroke-text {
-  color: black;
-  text-shadow: $stroke;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   letter-spacing: 4px;
-  mix-blend-mode: screen;
-  height:fit-content;
+  height: fit-content;
   width: fit-content;
 }
 
@@ -17,7 +16,7 @@
   padding: 1em 2em;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between; 
+  justify-content: space-between;
 
   &::before {
     content: '';
@@ -25,8 +24,28 @@
     background: linear-gradient(-45deg, #000 98.5%, transparent 98.5%);
     height: calc(100% + 4px);
     width: calc(100% + 4px);
-    top:-2px;
-    left:-2px;
+    top: -2px;
+    left: -2px;
     z-index: -1;
+  }
+}
+
+@mixin fadeInLeft {
+  animation: _fadeIn .4s linear;
+
+  @keyframes _fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  
+    50% {
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }

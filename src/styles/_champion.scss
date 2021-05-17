@@ -18,12 +18,7 @@
     }
 
     .champion__name {
-      color: white;
-      text-shadow: -2px -2px 0px $darkGrey,
-                    2px -2px 0px $darkGrey,
-                    -2px  2px 0px $darkGrey,
-                    2px  2px 0px $darkGrey;
-      mix-blend-mode: multiply;
+      -webkit-text-stroke: 2px #000;
       opacity: 1;
     }
 
@@ -79,7 +74,7 @@
   &__name {
     position: absolute;
     transform-origin: left;
-    z-index: 5;
+    z-index: 10;
   }
 
   &__country {

@@ -172,8 +172,8 @@ export default function CharacterDisplay({ champions, selectedChampion, setSelec
             </div>
             <div className="dashboard__info">
               {
-                currentAbilities.map((ability, i) => (
-                  <Detail key={i} ability={ability} />
+                viewChampion.weapons.map((weapon, i) => (
+                  <Detail key={i} ability={weapon} alignIt="flex-end"/>
                 ))
               }
             </div>

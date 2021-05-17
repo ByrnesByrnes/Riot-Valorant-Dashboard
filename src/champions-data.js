@@ -59,6 +59,32 @@ export const champions = [
         description: 'dying or allowing the timer to expire will end this ability.',
         vid: 'https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt50beaed6524c3219/5ecad82bc846021917ecbb89/Phoenix_X_v001_web.mp4'
       },
+    ],
+    weapons: [
+      {
+        id: 0,
+        name: 'guardian',
+        type: 'rifles',
+        img: <Vector4/>,
+        description: '',
+        vid: ''
+      },
+      {
+        id: 1,
+        name: 'spectre',
+        type: 'smgs',
+        img: <Vector4/>,
+        description: '',
+        vid: ''
+      },
+      {
+        id: 2,
+        name: 'sheriff',
+        type: 'sidearm',
+        img: <Vector4/>,
+        description: '',
+        vid: ''
+      },
     ]
   },
   {
@@ -99,6 +125,32 @@ export const champions = [
         img: <Vector8/>,
         description: 'a set of highly accurate knives that recharge on killing an opponent. FIRE to throw a single knife at your target.',
         vid: 'https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blta43d8d506e2f5e00/5ecad7f6957e405e0990574d/Jett_X_v001_web.mp4'
+      },
+    ],
+    weapons: [
+      {
+        id: 0,
+        name: 'guardian',
+        type: 'rifles',
+        img: <Vector4/>,
+        description: '',
+        vid: ''
+      },
+      {
+        id: 1,
+        name: 'spectre',
+        type: 'smgs',
+        img: <Vector4/>,
+        description: '',
+        vid: ''
+      },
+      {
+        id: 2,
+        name: 'sheriff',
+        type: 'sidearm',
+        img: <Vector4/>,
+        description: '',
+        vid: ''
       },
     ]
   },
@@ -141,6 +193,32 @@ export const champions = [
         description: 'bow with three long-range wall-piercing energy blasts. ',
         vid: 'https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf9fc34106a23479c/5ecad88397b46c1911ad1872/Sova_X_v001_web.mp4'
       },
+    ],
+    weapons: [
+      {
+        id: 0,
+        name: 'guardian',
+        type: 'rifles',
+        img: <Vector4/>,
+        description: '',
+        vid: ''
+      },
+      {
+        id: 1,
+        name: 'spectre',
+        type: 'smgs',
+        img: <Vector4/>,
+        description: '',
+        vid: ''
+      },
+      {
+        id: 2,
+        name: 'sheriff',
+        type: 'sidearm',
+        img: <Vector4/>,
+        description: '',
+        vid: ''
+      },
     ]
   },
   {
@@ -181,6 +259,32 @@ export const champions = [
         img: <Vector16/>,
         description: 'Target a friendly corpse. After a short delay, revive them with full health.',
         vid: 'https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltef1820f276fbaa0c/5ecad871957e405e09905755/Sage_X_v001_web.mp4'
+      },
+    ],
+    weapons: [
+      {
+        id: 0,
+        name: 'guardian',
+        type: 'rifles',
+        img: <Vector4/>,
+        description: '',
+        vid: ''
+      },
+      {
+        id: 1,
+        name: 'spectre',
+        type: 'smgs',
+        img: <Vector4/>,
+        description: '',
+        vid: ''
+      },
+      {
+        id: 2,
+        name: 'sheriff',
+        type: 'sidearm',
+        img: <Vector4/>,
+        description: '',
+        vid: ''
       },
     ]
   },
