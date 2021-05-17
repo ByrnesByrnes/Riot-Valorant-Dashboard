@@ -13,8 +13,6 @@
     height: 100%;
     animation: fadeIn 2s ease-in-out;
 
-
-
     & h2 {
       font-weight: 900;
       letter-spacing: 2px;
@@ -60,7 +58,15 @@
       left: -25%;
     }
   }
-  
+
+  &__image {
+    position: relative;
+    z-index: 10;
+    width: 300px;
+    height: 100px;
+    transform: translateX(-2em);
+    object-fit: contain;
+  }
 }
 
 

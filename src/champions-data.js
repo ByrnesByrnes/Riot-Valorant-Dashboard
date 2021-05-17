@@ -65,25 +65,22 @@ export const champions = [
         id: 0,
         name: 'guardian',
         type: 'rifles',
-        img: <Vector4/>,
+        image: './images/champions/weapons/weapon_1.png',
         description: '',
-        vid: ''
       },
       {
         id: 1,
         name: 'spectre',
         type: 'smgs',
-        img: <Vector4/>,
+        image: './images/champions/weapons/weapon_2.png',
         description: '',
-        vid: ''
       },
       {
         id: 2,
         name: 'sheriff',
         type: 'sidearm',
-        img: <Vector4/>,
+        image: './images/champions/weapons/weapon_3.png',
         description: '',
-        vid: ''
       },
     ]
   },
@@ -132,25 +129,22 @@ export const champions = [
         id: 0,
         name: 'guardian',
         type: 'rifles',
-        img: <Vector4/>,
+        image: './images/champions/weapons/weapon_1.png',
         description: '',
-        vid: ''
       },
       {
         id: 1,
         name: 'spectre',
         type: 'smgs',
-        img: <Vector4/>,
+        image: './images/champions/weapons/weapon_2.png',
         description: '',
-        vid: ''
       },
       {
         id: 2,
         name: 'sheriff',
         type: 'sidearm',
-        img: <Vector4/>,
+        image: './images/champions/weapons/weapon_3.png',
         description: '',
-        vid: ''
       },
     ]
   },
@@ -199,25 +193,22 @@ export const champions = [
         id: 0,
         name: 'guardian',
         type: 'rifles',
-        img: <Vector4/>,
+        image: './images/champions/weapons/weapon_1.png',
         description: '',
-        vid: ''
       },
       {
         id: 1,
         name: 'spectre',
         type: 'smgs',
-        img: <Vector4/>,
+        image: './images/champions/weapons/weapon_2.png',
         description: '',
-        vid: ''
       },
       {
         id: 2,
         name: 'sheriff',
         type: 'sidearm',
-        img: <Vector4/>,
+        image: './images/champions/weapons/weapon_3.png',
         description: '',
-        vid: ''
       },
     ]
   },
@@ -266,25 +257,22 @@ export const champions = [
         id: 0,
         name: 'guardian',
         type: 'rifles',
-        img: <Vector4/>,
+        image: './images/champions/weapons/weapon_1.png',
         description: '',
-        vid: ''
       },
       {
         id: 1,
         name: 'spectre',
         type: 'smgs',
-        img: <Vector4/>,
+        image: './images/champions/weapons/weapon_2.png',
         description: '',
-        vid: ''
       },
       {
         id: 2,
         name: 'sheriff',
         type: 'sidearm',
-        img: <Vector4/>,
+        image: './images/champions/weapons/weapon_3.png',
         description: '',
-        vid: ''
       },
     ]
   },

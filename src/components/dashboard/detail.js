@@ -11,7 +11,7 @@ export function Detail({ability, alignIt}) {
         <p>{ability.description}</p>
       </div>
       <div className="detail__img">
-        {ability.img}
+        {ability.img || <img className="detail__image" src={ability.image} alt={ability.name}/>}
       </div>
     </div>
   )
