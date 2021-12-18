@@ -117,9 +117,8 @@
   &__abilities {
     background-color: $darkGrey;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
+    display: flex;
+    align-items: stretch;
     color: $white;
     padding: 1em;
     position: relative;
@@ -140,6 +139,9 @@
   }
 
   &__ability {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     text-align: center;
     width: 100%;
     border-right: 1px solid $primary;
